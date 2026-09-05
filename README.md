@@ -24,7 +24,7 @@ Clone the repository and start the server:
 ```bash
 git clone https://github.com/VirtualRV/AmitaPortfolio.git
 cd AmitaPortfolio
-node server.js
+node local-server.js
 ```
 
 Then visit:
