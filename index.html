@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amita Dubey — Graphic, UI & Motion Designer Portfolio</title>
+  <meta name="description" content="Portfolio of Amita Dubey, Creative Graphic Designer, UI Designer & Motion Designer with 5+ years of experience delivering 500+ high-impact visual solutions for global brands.">
+  <meta name="author" content="Amita Dubey">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Amita Dubey — Graphic, UI & Motion Designer">
+  <meta property="og:description" content="Creative Graphic Designer with 5+ years of experience in branding, social media creatives, motion graphics, UI design, and digital marketing assets.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-portrait.jpg">
+
+  <!-- Fonts: Hanken Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body class="dark-theme">
+
+  <!-- Custom Trailing Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- FIXED FLOATING NAVBAR (Okta Studio Replica) -->
+  <header class="okta-header" id="navbar">
+    <div class="header-inner">
+      <!-- Left: Location & Live Clock -->
+      <div class="header-left">
+        <span class="location-tag">Noida, (IN)</span>
+        <span class="divider-slash">//</span>
+        <span class="pulse-dot"></span>
+        <span class="live-clock" id="liveClock">11:47:00 AM</span>
+        <button class="expand-indicator" id="themeToggleBtn" title="Toggle ambiance" aria-label="Toggle ambiance">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        </button>
+      </div>
+
+      <!-- Center: Work link, Brand Logo, Playground link -->
+      <div class="header-center">
+        <a href="#projects" class="nav-count-link">Work <sup class="counter-badge">(06)</sup></a>
+        <a href="#hero" class="brand-logo" id="brandLogo">
+          <span class="logo-name">Amita</span>
+          <span class="logo-accent">Dubey</span>
+        </a>
+        <a href="#playground" class="nav-count-link">Playground <sup class="counter-badge">(04)</sup></a>
+      </div>
+
+      <!-- Right: Links & CTA -->
+      <div class="header-right">
+        <nav class="desktop-nav">
+          <a href="#services" class="nav-item">Services</a>
+          <a href="#projects" class="nav-item" id="openArchiveNavBtn">Archive</a>
+          <a href="#studio" class="nav-item">Studio</a>
+          <a href="#contact" class="nav-item">Contact</a>
+        </nav>
+        <a href="#contact" class="btn-start-now-nav">
+          <span>Start Now</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-inner">
+        <a href="#hero" class="mob-link">Home</a>
+        <a href="#studio" class="mob-link">About & Studio</a>
+        <a href="#projects" class="mob-link">Selected Work (06)</a>
+        <a href="#services" class="mob-link">Disciplines & Skills</a>
+        <a href="#process" class="mob-link">How I Ship</a>
+        <a href="#experience" class="mob-link">Experience</a>
+        <a href="#playground" class="mob-link">Playground</a>
+        <a href="#faq" class="mob-link">FAQ</a>
+        <a href="#contact" class="mob-link cta-mob">Get In Touch ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 00 // HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <!-- Big Editorial Headline Left -->
+        <div class="hero-left-content">
+          <h1 class="hero-editorial-title">
+            <span class="title-line">Amita</span>
+            <span class="title-line italic-accent">-Design</span>
+            <span class="title-line">Studio</span>
+          </h1>
+
+          <!-- Meta stats column underneath title -->
+          <div class="hero-meta-grid">
+            <div class="meta-col">
+              <span class="meta-label">POST-NUMBER</span>
+              <span class="meta-value">20.08</span>
+            </div>
+            <div class="meta-col">
+              <span class="meta-label">ROLE</span>
+              <span class="meta-value">GRAPHIC &amp; UI</span>
+            </div>
+            <div class="meta-col">
+              <span class="meta-label">EXPERIENCE</span>
+              <span class="meta-value">5+ YEARS</span>
+            </div>
+            <div class="meta-col">
+              <span class="meta-label">CREATIVES</span>
+              <span class="meta-value">500+ SHIPPED</span>
+            </div>
+          </div>
+
+          <!-- Big Year Marker & CTA Row -->
+          <div class="hero-year-row">
+            <div class="year-indicator">
+              <span class="year-plus">+ 001</span>
+              <span class="year-large">2026</span>
+            </div>
+            <div class="hero-cta-wrap">
+              <a href="#contact" class="btn-start-now-hero">
+                <span class="btn-text">Start Now</span>
+                <span class="btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Portrait Image Right -->
+        <div class="hero-right-visual">
+          <div class="portrait-card" id="portraitCard">
+            <img src="assets/images/hero-portrait.jpg" alt="Amita Dubey — Graphic & UI Designer" class="portrait-img">
+            <div class="portrait-glare"></div>
+            <div class="portrait-badge">
+              <span class="badge-dot"></span>
+              <span>Available for high-impact projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DUAL INFINITE MARQUEE TICKERS -->
+    <div class="marquee-wrapper">
+      <div class="marquee-track track-top">
+        <div class="marquee-content">
+          <span>BRAND IDENTITY</span> <span class="star">★</span>
+          <span>UI/UX DESIGN</span> <span class="star">★</span>
+          <span>MOTION GRAPHICS</span> <span class="star">★</span>
+          <span>SOCIAL MEDIA CREATIVES</span> <span class="star">★</span>
+          <span>REELS &amp; MARKETING ASSETS</span> <span class="star">★</span>
+          <span>AFTER EFFECTS &amp; FIGMA</span> <span class="star">★</span>
+          <span>500+ DELIVERED</span> <span class="star">★</span>
+          <span>EDITORIAL LAYOUTS</span> <span class="star">★</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span>BRAND IDENTITY</span> <span class="star">★</span>
+          <span>UI/UX DESIGN</span> <span class="star">★</span>
+          <span>MOTION GRAPHICS</span> <span class="star">★</span>
+          <span>SOCIAL MEDIA CREATIVES</span> <span class="star">★</span>
+          <span>REELS &amp; MARKETING ASSETS</span> <span class="star">★</span>
+          <span>AFTER EFFECTS &amp; FIGMA</span> <span class="star">★</span>
+          <span>500+ DELIVERED</span> <span class="star">★</span>
+          <span>EDITORIAL LAYOUTS</span> <span class="star">★</span>
+        </div>
+      </div>
+
+      <div class="marquee-track track-bottom">
+        <div class="marquee-content reverse">
+          <span>ZENESYS TECHNOSYS</span> <span class="star">✦</span>
+          <span>5+ YEARS INDUSTRY EXP</span> <span class="star">✦</span>
+          <span>TEKSHAPERS SOFTWARE</span> <span class="star">✦</span>
+          <span>MAGIC SOFTWARE COMICS</span> <span class="star">✦</span>
+          <span>DUCAT NOIDA SPECIALIZATION</span> <span class="star">✦</span>
+          <span>BEHANCE FEATURED</span> <span class="star">✦</span>
+          <span>NOIDA, INDIA BASE</span> <span class="star">✦</span>
+        </div>
+        <div class="marquee-content reverse" aria-hidden="true">
+          <span>ZENESYS TECHNOSYS</span> <span class="star">✦</span>
+          <span>5+ YEARS INDUSTRY EXP</span> <span class="star">✦</span>
+          <span>TEKSHAPERS SOFTWARE</span> <span class="star">✦</span>
+          <span>MAGIC SOFTWARE COMICS</span> <span class="star">✦</span>
+          <span>DUCAT NOIDA SPECIALIZATION</span> <span class="star">✦</span>
+          <span>BEHANCE FEATURED</span> <span class="star">✦</span>
+          <span>NOIDA, INDIA BASE</span> <span class="star">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 01 & 02 // STUDIO & ABOUT SECTION (Okta Studio Replica) -->
+    <section class="studio-section" id="studio">
+      <div class="container studio-container">
+        <!-- Left Side Column Info -->
+        <div class="studio-left-col">
+          <div class="section-tag">( + 02 — STUDIO )</div>
+          <div class="studio-profile-name">
+            <h3>Amita Dubey®</h3>
+            <p>/Studio &amp; Visual Direction</p>
+          </div>
+          <div class="studio-meta-list">
+            <div class="studio-meta-item">
+              <span class="s-label">FOUNDED —</span>
+              <span class="s-value">2019</span>
+            </div>
+            <div class="studio-meta-item">
+              <span class="s-label">EXPERIENCE —</span>
+              <span class="s-value">5+ YEARS</span>
+            </div>
+            <div class="studio-meta-item">
+              <span class="s-label">BASE —</span>
+              <span class="s-value">NOIDA / INDIA</span>
+            </div>
+            <div class="studio-meta-item">
+              <span class="s-label">SHIPPED —</span>
+              <span class="s-value highlight">500+ ASSETS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Bold Editorial Statement & Bio -->
+        <div class="studio-right-col">
+          <h2 class="studio-manifesto">
+            Rather be remembered than <span class="italic-accent">liked.</span>
+          </h2>
+          <p class="studio-description">
+            Creative Graphic Designer with <strong>5+ years of hands-on experience</strong> in branding, social media creatives, motion graphics, UI design, and digital marketing assets. Skilled in Photoshop, Illustrator, After Effects, Figma, and Canva. Experienced in delivering high-impact visual solutions for brands across multiple industries with a spotless deadline track record.
+          </p>
+
+          <div class="what-we-do-block">
+            <span class="block-title">(WHAT I DO)</span>
+            <ul class="deliverable-list">
+              <li><span class="bullet">▪</span> Brand identity &amp; visual systems</li>
+              <li><span class="bullet">▪</span> Social media creatives, reels &amp; video marketing</li>
+              <li><span class="bullet">▪</span> Modern UI design &amp; Figma interactive systems</li>
+              <li><span class="bullet">▪</span> Motion graphics, After Effects kinetic animations</li>
+              <li><span class="bullet">▪</span> E-books, editorial book design &amp; comic layout storytelling</li>
+            </ul>
+          </div>
+
+          <!-- 4 Stat Pill Counters -->
+          <div class="stats-pills-row">
+            <div class="stat-pill">
+              <span class="num">5+</span>
+              <span class="desc">Years in Design</span>
+            </div>
+            <div class="stat-pill">
+              <span class="num">500+</span>
+              <span class="desc">Creatives &amp; Reels</span>
+            </div>
+            <div class="stat-pill">
+              <span class="num">100%</span>
+              <span class="desc">Deadline Record</span>
+            </div>
+            <div class="stat-pill">
+              <span class="num">2</span>
+              <span class="desc">Top Agencies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 // SELECTED PROJECTS SECTION -->
+    <section class="projects-section" id="projects">
+      <div class="container projects-container">
+        <!-- Section Header -->
+        <div class="section-tag-row">
+          <div class="section-tag">( + 03 — SELECTED PROJECTS )</div>
+          <div class="projects-meta-right">
+            <span>AMITA — SELECTED PROJECTS 2021 · 2026</span>
+            <span class="tag-badge">FEATURED</span>
+          </div>
+        </div>
+
+        <div class="projects-interactive-grid">
+          <!-- Left: Big Project List with Hover Switcher -->
+          <div class="project-list-col">
+            <div class="project-item active" data-project="zenesys" data-img="assets/images/proj-brand.jpg" data-title="Zenesys Brand Evolution" data-category="Brand Identity & Marketing Assets" data-year="2021 — 2026" data-client="Zenesys Technosys" data-desc="Complete corporate identity revamp, 500+ social marketing assets, multi-channel performance creative systems, and high-impact digital campaigns.">
+              <div class="project-row-inner">
+                <span class="p-num">01</span>
+                <span class="p-title">Zenesys Brand Evolution</span>
+                <span class="p-category">Branding / Social</span>
+                <span class="p-arrow">↗</span>
+              </div>
+            </div>
+
+            <div class="project-item" data-project="momento" data-img="assets/images/proj-ui.jpg" data-title="Momento Social Pulse" data-category="Reels & Motion Graphics" data-year="2023 — 2026" data-client="Join Momento" data-desc="Dynamic motion design system, video reels, viral engagement creatives and interactive lifestyle campaigns resulting in 3x audience reach.">
+              <div class="project-row-inner">
+                <span class="p-num">02</span>
+                <span class="p-title">Momento Social Pulse</span>
+                <span class="p-category">Motion / Reels</span>
+                <span class="p-arrow">↗</span>
+              </div>
+            </div>
+
+            <div class="project-item" data-project="magic" data-img="assets/images/proj-comic.jpg" data-title="Magic Software E-Books & Comics" data-category="Editorial & Comic Layouts" data-year="2019 — 2020" data-client="Magic Software" data-desc="Intricate comic book layouts, speech bubbles, narrative pacing, and digital book adaptations with dynamic story paneling and visual effects.">
+              <div class="project-row-inner">
+                <span class="p-num">03</span>
+                <span class="p-title">Magic Software E-Books</span>
+                <span class="p-category">Editorial / Comic</span>
+                <span class="p-arrow">↗</span>
+              </div>
+            </div>
+
+            <div class="project-item" data-project="tekshapers" data-img="assets/images/proj-ui.jpg" data-title="Tekshapers UI Framework" data-category="Web UI & Prototyping" data-year="2020" data-client="Tekshapers" data-desc="Scalable component design system, Figma UI dashboard components, and web interface layouts built for developer alignment.">
+              <div class="project-row-inner">
+                <span class="p-num">04</span>
+                <span class="p-title">Tekshapers Digital UI</span>
+                <span class="p-category">UI / Figma</span>
+                <span class="p-arrow">↗</span>
+              </div>
+            </div>
+
+            <div class="project-item" data-project="kinetic" data-img="assets/images/proj-brand.jpg" data-title="Kinetic Typography Reel" data-category="After Effects Motion" data-year="2026" data-client="Independent" data-desc="Kinetic typography, 3D motion transitions, audio-synchronized video edits, and modular motion templates for social campaigns.">
+              <div class="project-row-inner">
+                <span class="p-num">05</span>
+                <span class="p-title">Kinetic Motion Series</span>
+                <span class="p-category">After Effects</span>
+                <span class="p-arrow">↗</span>
+              </div>
+            </div>
+
+            <div class="project-item" data-project="behance" data-img="assets/images/proj-comic.jpg" data-title="Behance Curated Portfolio" data-category="Visual Showcase" data-year="2019 — 2026" data-client="Behance Global" data-desc="Curated collection of graphic design, logo marks, vector illustrations, and digital artwork featured across creative showcases.">
+              <div class="project-row-inner">
+                <span class="p-num">06</span>
+                <span class="p-title">Behance Graphic Series</span>
+                <span class="p-category">Showcase</span>
+                <span class="p-arrow">↗</span>
+              </div>
+            </div>
+
+            <!-- Bottom Archive Button -->
+            <div class="archive-action-box">
+              <div class="archive-count">
+                <span class="arch-number">06</span>
+                <span class="arch-label">SELECTED WORKS<br>IN ARCHIVE</span>
+              </div>
+              <button class="btn-full-archive" id="openArchiveBtn">
+                <span class="arch-btn-text">Full Archive</span>
+                <span class="arch-btn-icon">↗</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Dynamic Sticky Project Display Card -->
+          <div class="project-preview-col">
+            <div class="sticky-preview-card" id="previewCard">
+              <div class="preview-media-wrapper">
+                <img src="assets/images/proj-brand.jpg" alt="Project Preview" id="previewImg" class="preview-img">
+                <div class="preview-overlay"></div>
+                <div class="preview-floating-chip" id="previewCategory">Brand Identity & Marketing Assets</div>
+              </div>
+              <div class="preview-caption">
+                <div class="preview-caption-left">
+                  <h4 id="previewTitle">Zenesys Brand Evolution</h4>
+                  <p id="previewClient">Zenesys Technosys • July 2021 — 2026</p>
+                </div>
+                <button class="btn-inspect-project" id="inspectProjectBtn" title="View Case Study">
+                  <span>Explore</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 // DISCIPLINES & SOFTWARE TOOLKIT -->
+    <section class="services-section" id="services">
+      <div class="container services-container">
+        <div class="section-tag-row">
+          <div class="section-tag">( + 04 — DISCIPLINES &amp; TOOLKIT )</div>
+          <div class="services-header-text">
+            <span>CORE SOFTWARE &amp; METHODOLOGY</span>
+          </div>
+        </div>
+
+        <div class="services-intro">
+          <h2 class="services-title">Specialized disciplines built for <span class="italic-accent">enduring impact.</span></h2>
+          <p class="services-sub">From vector identity and pixel-perfect UI wireframes to keyframed motion reels and narrative publishing.</p>
+        </div>
+
+        <!-- 6 Software & Discipline Cards -->
+        <div class="disciplines-grid">
+          <div class="discipline-card">
+            <div class="card-top">
+              <span class="software-badge ps">PS</span>
+              <span class="phase-id">01 / BRAND &amp; COMPOSITING</span>
+            </div>
+            <h3 class="card-name">Adobe Photoshop</h3>
+            <p class="card-desc">Advanced digital photo compositing, high-end commercial retouching, creative manipulation, and high-CTR social media ad campaign creatives.</p>
+            <div class="card-tags">
+              <span>Photo Manipulation</span>
+              <span>Social Ads</span>
+              <span>Visual Composition</span>
+            </div>
+          </div>
+
+          <div class="discipline-card">
+            <div class="card-top">
+              <span class="software-badge ai">AI</span>
+              <span class="phase-id">02 / VECTOR &amp; IDENTITY</span>
+            </div>
+            <h3 class="card-name">Adobe Illustrator</h3>
+            <p class="card-desc">Geometric vector branding, custom typography, brand guideline books, bespoke icon sets, and vector illustrations for print and digital surfaces.</p>
+            <div class="card-tags">
+              <span>Logomarks</span>
+              <span>Brand Guidelines</span>
+              <span>Vector Art</span>
+            </div>
+          </div>
+
+          <div class="discipline-card">
+            <div class="card-top">
+              <span class="software-badge ae">AE</span>
+              <span class="phase-id">03 / MOTION &amp; REELS</span>
+            </div>
+            <h3 class="card-name">After Effects</h3>
+            <p class="card-desc">Kinetic typography, animated promotional video reels, visual transitions, logo stings, and dynamic motion assets that turn passive scrollers into engaged followers.</p>
+            <div class="card-tags">
+              <span>Kinetic Type</span>
+              <span>Instagram Reels</span>
+              <span>Motion Systems</span>
+            </div>
+          </div>
+
+          <div class="discipline-card">
+            <div class="card-top">
+              <span class="software-badge fig">FIG</span>
+              <span class="phase-id">04 / UI &amp; SYSTEMS</span>
+            </div>
+            <h3 class="card-name">Figma</h3>
+            <p class="card-desc">Comprehensive UI/UX design, interactive prototyping, design tokens, component libraries, and clean responsive layouts for web and mobile products.</p>
+            <div class="card-tags">
+              <span>UI Components</span>
+              <span>Interactive Prototypes</span>
+              <span>Web &amp; Mobile</span>
+            </div>
+          </div>
+
+          <div class="discipline-card">
+            <div class="card-top">
+              <span class="software-badge can">CAN</span>
+              <span class="phase-id">05 / RAPID MARKETING</span>
+            </div>
+            <h3 class="card-name">Canva</h3>
+            <p class="card-desc">High-speed marketing asset generation, editable client brand templates, presentations, and fast-turnaround daily social publishing pipelines.</p>
+            <div class="card-tags">
+              <span>Agile Creatives</span>
+              <span>Marketing Kits</span>
+              <span>Client Templates</span>
+            </div>
+          </div>
+
+          <div class="discipline-card">
+            <div class="card-top">
+              <span class="software-badge pr">PR / LR</span>
+              <span class="phase-id">06 / EDITING &amp; COLOR</span>
+            </div>
+            <h3 class="card-name">Premiere Pro &amp; Lightroom</h3>
+            <p class="card-desc">Video timeline editing, pacing, soundtrack synchronization, cinematic color grading, and photograph look development for consistent brand aesthetics.</p>
+            <div class="card-tags">
+              <span>Video Pacing</span>
+              <span>Color Grading</span>
+              <span>Sound Sync</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 // HOW I SHIP (PROCESS) -->
+    <section class="process-section" id="process">
+      <div class="container process-container">
+        <div class="section-tag-row">
+          <div class="section-tag">( + 05 — HOW I SHIP )</div>
+          <div class="process-meta-right">
+            <span>4-STAGE CREATIVE PROTOCOL</span>
+          </div>
+        </div>
+
+        <div class="process-grid">
+          <!-- S.01 -->
+          <div class="process-card">
+            <div class="process-card-header">
+              <span class="step-large">S.01</span>
+              <span class="step-phase">PHASE 1/4</span>
+            </div>
+            <h3 class="step-title">Listen &amp; Audit</h3>
+            <p class="step-body">Deep immersion into the brand objective, target audience psychology, competitor visual benchmarks, and project constraints before opening canvas.</p>
+            <div class="step-pills">
+              <span>RESEARCH</span>
+              <span>AUDIT</span>
+              <span>STRATEGY</span>
+            </div>
+          </div>
+
+          <!-- S.02 -->
+          <div class="process-card">
+            <div class="process-card-header">
+              <span class="step-large">S.02</span>
+              <span class="step-phase">PHASE 2/4</span>
+            </div>
+            <h3 class="step-title">Sketch &amp; Concept</h3>
+            <p class="step-body">Wireframes, moodboards, rough storyboards, and distinct aesthetic directions presented early to guarantee alignment on vision.</p>
+            <div class="step-pills">
+              <span>WIREFRAMES</span>
+              <span>STORYBOARDS</span>
+              <span>STYLEFRAMES</span>
+            </div>
+          </div>
+
+          <!-- S.03 -->
+          <div class="process-card">
+            <div class="process-card-header">
+              <span class="step-large">S.03</span>
+              <span class="step-phase">PHASE 3/4</span>
+            </div>
+            <h3 class="step-title">Craft &amp; Animate</h3>
+            <p class="step-body">Full-fidelity execution across Photoshop, Illustrator, and After Effects. Precision typography, color harmony, and kinetic motion polish.</p>
+            <div class="step-pills">
+              <span>HIGH-RES DESIGN</span>
+              <span>MOTION KEYFRAMES</span>
+              <span>POLISH</span>
+            </div>
+          </div>
+
+          <!-- S.04 -->
+          <div class="process-card">
+            <div class="process-card-header">
+              <span class="step-large">S.04</span>
+              <span class="step-phase">PHASE 4/4</span>
+            </div>
+            <h3 class="step-title">Ship &amp; Scale</h3>
+            <p class="step-body">Multi-aspect-ratio exports (1:1, 9:16, 16:9), organized asset delivery packages, font licensing, and ready-to-run marketing handoffs with zero delays.</p>
+            <div class="step-pills">
+              <span>OPTIMIZED EXPORTS</span>
+              <span>SOCIAL FORMATS</span>
+              <span>ZERO DELAY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 // CAREER TRAJECTORY & EDUCATION -->
+    <section class="experience-section" id="experience">
+      <div class="container experience-container">
+        <div class="section-tag-row">
+          <div class="section-tag">( + 06 — CAREER &amp; EDUCATION )</div>
+          <div class="exp-meta-right">
+            <span>5+ YEARS PROFESSIONAL TRACK RECORD</span>
+          </div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Item 1: Zenesys -->
+          <div class="timeline-item">
+            <div class="timeline-date-col">
+              <span class="timeline-year">JULY 2021 — 2026</span>
+              <span class="timeline-duration">5 YEARS</span>
+              <span class="timeline-badge current">PRIMARY POST</span>
+            </div>
+            <div class="timeline-content-col">
+              <div class="company-row">
+                <h3 class="company-name">Zenesys Technosys Pvt. Ltd.</h3>
+                <span class="job-role">Senior Graphic Designer, UI &amp; Motion Specialist</span>
+              </div>
+              <p class="company-summary">Led visual creative direction for agency and global client accounts across multi-channel branding and digital advertising initiatives.</p>
+              <ul class="achievement-list">
+                <li>Created <strong>500+ social media creatives</strong>, high-velocity reels, and viral marketing assets.</li>
+                <li>Designed corporate branding materials and digital campaigns that measurably improved audience engagement.</li>
+                <li>Produced motion graphics, kinetic type, and video content for key marketing product launches.</li>
+                <li>Collaborated seamlessly with clients and cross-functional marketing teams to deliver 100% of projects within strict deadlines.</li>
+              </ul>
+              <div class="timeline-links">
+                <a href="https://www.instagram.com/zenesys_official?igsh=Zmhjb3cwcmNyaWE3" target="_blank" rel="noopener" class="exp-social-link">
+                  <span>Zenesys Official Instagram</span> ↗
+                </a>
+                <a href="https://www.instagram.com/join_momento?igsh=MW43anQ1aGlkenhpbQ==" target="_blank" rel="noopener" class="exp-social-link">
+                  <span>Join Momento Campaign</span> ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Tekshapers / Magic Software -->
+          <div class="timeline-item">
+            <div class="timeline-date-col">
+              <span class="timeline-year">NOV 2019 — JUNE 2020</span>
+              <span class="timeline-duration">6 MONTHS</span>
+              <span class="timeline-badge">CLIENT-SIDE</span>
+            </div>
+            <div class="timeline-content-col">
+              <div class="company-row">
+                <h3 class="company-name">Tekshapers Software Solutions</h3>
+                <span class="job-role">Designer &amp; Developer — Client Side: Magic Software</span>
+              </div>
+              <p class="company-summary">Spearheaded digital publishing asset preparation, illustrated panel adaptation, and visual story pacing.</p>
+              <ul class="achievement-list">
+                <li>Designed intricate layouts, typography, and page styles for interactive e-books and comic books.</li>
+                <li>Integrated dialogue text, expressive speech bubbles, and stylistic graphic effects matching dynamic story flow.</li>
+                <li>Ensured pixel-accurate digital screen rendering across varying tablet and mobile reader viewports.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 3: DUCAT Noida Training -->
+          <div class="timeline-item">
+            <div class="timeline-date-col">
+              <span class="timeline-year">MAY 2019 — AUG 2019</span>
+              <span class="timeline-duration">INTENSIVE TRAINING</span>
+              <span class="timeline-badge">SPECIALIZATION</span>
+            </div>
+            <div class="timeline-content-col">
+              <div class="company-row">
+                <h3 class="company-name">DUCAT, Noida</h3>
+                <span class="job-role">Graphic Designing Specialization</span>
+              </div>
+              <p class="company-summary">Deep-dive professional training in vector design, raster image compositing, visual communication principles, color theory, and Adobe Creative Suite mastery.</p>
+            </div>
+          </div>
+
+          <!-- Item 4: Education Degrees -->
+          <div class="timeline-item">
+            <div class="timeline-date-col">
+              <span class="timeline-year">2014 — 2019</span>
+              <span class="timeline-duration">ACADEMIC FOUNDATION</span>
+              <span class="timeline-badge">EDUCATION</span>
+            </div>
+            <div class="timeline-content-col">
+              <div class="education-subgrid">
+                <div class="edu-card">
+                  <span class="edu-degree">Bachelor of Arts (B.A.)</span>
+                  <span class="edu-institution">C.S.J.M.U — Chhatrapati Shahu Ji Maharaj University</span>
+                  <span class="edu-span">Graduated 2019</span>
+                </div>
+                <div class="edu-card">
+                  <span class="edu-degree">Senior Secondary (12th) &amp; High School (10th)</span>
+                  <span class="edu-institution">UP Board</span>
+                  <span class="edu-span">Passed 2016 &amp; 2014</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 // PLAYGROUND & EXPERIMENTAL WORKS -->
+    <section class="playground-section" id="playground">
+      <div class="container playground-container">
+        <div class="section-tag-row">
+          <div class="section-tag">( + 07 — PLAYGROUND )</div>
+          <div class="play-meta-right">
+            <span>EXPERIMENTAL VISUAL LAB (04)</span>
+          </div>
+        </div>
+
+        <div class="playground-header">
+          <h2 class="playground-title">Where raw curiosity meets <span class="italic-accent">visual craft.</span></h2>
+          <p class="playground-sub">A rotating canvas of uncommissioned motion studies, typographic experiments, and design prototypes.</p>
+        </div>
+
+        <div class="playground-slider-wrapper">
+          <div class="playground-cards-grid">
+            <div class="play-card" data-experiment="kinetic">
+              <div class="play-media">
+                <div class="play-art art-kinetic">
+                  <div class="kinetic-text-wrap">
+                    <span>BOLD</span>
+                    <span class="accent-orange">MOTION</span>
+                    <span>SYSTEMS</span>
+                  </div>
+                </div>
+                <div class="play-chip">01 // KINETIC TYPE</div>
+              </div>
+              <div class="play-meta">
+                <h4>Dynamic Type Rhythms</h4>
+                <p>After Effects keyframed kinetic speed ramp study</p>
+              </div>
+            </div>
+
+            <div class="play-card" data-experiment="neon">
+              <div class="play-media">
+                <div class="play-art art-neon">
+                  <div class="neon-circle"></div>
+                  <div class="neon-line"></div>
+                </div>
+                <div class="play-chip">02 // 3D BRAND IDENTITY</div>
+              </div>
+              <div class="play-meta">
+                <h4>Aurora Luxury Packaging</h4>
+                <p>Red glass bottle render &amp; luxury brand identity</p>
+              </div>
+            </div>
+
+            <div class="play-card" data-experiment="ui">
+              <div class="play-media">
+                <div class="play-art art-ui">
+                  <div class="ui-mockup-window">
+                    <div class="ui-bar"><span></span><span></span><span></span></div>
+                    <div class="ui-grid-lines"></div>
+                  </div>
+                </div>
+                <div class="play-chip">03 // FIGMA COMPONENT SUITE</div>
+              </div>
+              <div class="play-meta">
+                <h4>Neural Design System</h4>
+                <p>Dark mode component library &amp; fluid animations</p>
+              </div>
+            </div>
+
+            <div class="play-card" data-experiment="comic">
+              <div class="play-media">
+                <div class="play-art art-comic">
+                  <div class="comic-panel-mini">
+                    <span class="sound-bubble">SHRAKK!</span>
+                  </div>
+                </div>
+                <div class="play-chip">04 // COMIC SPREAD</div>
+              </div>
+              <div class="play-meta">
+                <h4>Noir Graphic Panel Flow</h4>
+                <p>Speech bubble geometry &amp; high contrast narrative flow</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 // KIND WORDS & CLIENT REVIEWS -->
+    <section class="reviews-section" id="reviews">
+      <div class="container reviews-container">
+        <div class="section-tag-row">
+          <div class="section-tag">( + 08 — KIND WORDS )</div>
+          <div class="reviews-meta-right">
+            <span>CLIENT &amp; TEAM TESTIMONIALS</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-mark">“</div>
+          <p class="testimonial-quote" id="activeTestimonial">
+            "Amita delivered over 500+ social creatives and campaign reels for us without missing a single delivery deadline. Her ability to translate complex marketing concepts into captivating visual designs and motion graphics was instrumental in boosting our social engagement across all channels."
+          </p>
+          <div class="testimonial-author-row">
+            <div class="author-details">
+              <span class="author-name">Marketing Lead</span>
+              <span class="author-company">Zenesys Technosys Client Division</span>
+            </div>
+            <div class="review-nav-dots">
+              <button class="dot-btn active" data-index="0" aria-label="Quote 1"></button>
+              <button class="dot-btn" data-index="1" aria-label="Quote 2"></button>
+              <button class="dot-btn" data-index="2" aria-label="Quote 3"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 // FAQ (OKTA CHAT PILL ACCORDION) -->
+    <section class="faq-section" id="faq">
+      <div class="container faq-container">
+        <div class="section-tag-row">
+          <div class="section-tag">( + 09 — FREQUENTLY ASKED )</div>
+          <div class="faq-meta-right">
+            <span>WORKFLOW &amp; COLLABORATION</span>
+          </div>
+        </div>
+
+        <div class="chat-faq-list">
+          <!-- FAQ 1 -->
+          <div class="chat-faq-item">
+            <div class="chat-pill-question" role="button" tabindex="0">
+              <span>What design services do you offer?</span>
+              <span class="faq-indicator">+</span>
+            </div>
+            <div class="chat-box-answer">
+              <div class="chat-answer-inner">
+                I specialize in <strong>Brand Identity, Social Media Creatives, Motion Graphics &amp; Reels, UI/UX Design in Figma</strong>, and editorial e-book/comic design. From initial conceptualization to high-volume asset production, I provide end-to-end visual execution.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="chat-faq-item">
+            <div class="chat-pill-question" role="button" tabindex="0">
+              <span>How fast can you deliver creative assets?</span>
+              <span class="faq-indicator">+</span>
+            </div>
+            <div class="chat-box-answer">
+              <div class="chat-answer-inner">
+                Single graphics or reel snippets can typically be turned around within <strong>24 to 48 hours</strong>. Complete monthly campaign batches (e.g. 20-30 creatives) or full UI sprints are structured with scheduled milestones and a guaranteed zero-delay record.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="chat-faq-item">
+            <div class="chat-pill-question" role="button" tabindex="0">
+              <span>Do you collaborate with remote or international clients?</span>
+              <span class="faq-indicator">+</span>
+            </div>
+            <div class="chat-box-answer">
+              <div class="chat-answer-inner">
+                Yes! Based in <strong>Noida, India (IST)</strong>, I have extensive experience collaborating across multiple time zones. I maintain clear asynchronous communication via Slack, Google Meet, and Figma comments.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="chat-faq-item">
+            <div class="chat-pill-question" role="button" tabindex="0">
+              <span>What software tools do you operate in?</span>
+              <span class="faq-indicator">+</span>
+            </div>
+            <div class="chat-box-answer">
+              <div class="chat-answer-inner">
+                My daily production stack includes <strong>Adobe Photoshop, Illustrator, After Effects, Figma, Canva, Premiere Pro, and Lightroom</strong>. All files are cleanly structured with organized layers and ready for developer or printer handoff.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="chat-faq-item">
+            <div class="chat-pill-question" role="button" tabindex="0">
+              <span>How can we start working together?</span>
+              <span class="faq-indicator">+</span>
+            </div>
+            <div class="chat-box-answer">
+              <div class="chat-answer-inner">
+                Fill out the project brief form below or reach out directly at <a href="mailto:amitadubey46@gmail.com" class="faq-inline-link">amitadubey46@gmail.com</a> or phone <a href="tel:8318843945" class="faq-inline-link">+91 8318843945</a>. I respond within 4 business hours.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 // START A PROJECT / CONTACT (Okta Studio Replica) -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-container">
+        <!-- Left Side: Editorial Pitch & Direct Coordinates -->
+        <div class="contact-left-col">
+          <div class="contact-tag-wrap">
+            <span class="section-tag">( + 10 — START A PROJECT )</span>
+            <span class="avg-reply-badge">● AVG REPLY — 4H</span>
+          </div>
+
+          <h2 class="contact-headline">
+            Tell me what you're <span class="italic-accent">building.</span>
+          </h2>
+
+          <p class="contact-subtext">
+            Direct communication with Amita Dubey — not a sales proxy or bot. Share your project goals, scope, and timeline below, and I'll respond within one business day with ideas and a fixed quote.
+          </p>
+
+          <div class="contact-guarantees">
+            <div class="guarantee-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>Reply within 4 business hours</span>
+            </div>
+            <div class="guarantee-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>100% On-time delivery track record</span>
+            </div>
+            <div class="guarantee-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>Transparent fixed estimate before work begins</span>
+            </div>
+          </div>
+
+          <!-- Direct Info Block -->
+          <div class="direct-contact-meta">
+            <div class="meta-row">
+              <span class="meta-title">EMAIL</span>
+              <a href="mailto:amitadubey46@gmail.com" class="meta-link">amitadubey46@gmail.com</a>
+            </div>
+            <div class="meta-row">
+              <span class="meta-title">PHONE</span>
+              <a href="tel:8318843945" class="meta-link">+91 8318843945</a>
+            </div>
+            <div class="meta-row">
+              <span class="meta-title">STUDIO BASE</span>
+              <span class="meta-link">Noida, Uttar Pradesh, India</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-title">PORTFOLIO</span>
+              <a href="https://www.behance.net/amitadubey/projects" target="_blank" rel="noopener" class="meta-link">behance.net/amitadubey/projects ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Interactive Project Brief Form -->
+        <div class="contact-right-col">
+          <form class="project-brief-form" id="briefForm">
+            <div class="form-row two-cols">
+              <div class="input-group">
+                <label for="userName">YOUR NAME *</label>
+                <input type="text" id="userName" name="name" placeholder="Amita's Next Collaborator" required>
+              </div>
+              <div class="input-group">
+                <label for="userEmail">EMAIL *</label>
+                <input type="email" id="userEmail" name="email" placeholder="you@company.com" required>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="userCompany">COMPANY OR BRAND (optional)</label>
+              <input type="text" id="userCompany" name="company" placeholder="Studio, Brand or Venture">
+            </div>
+
+            <!-- Clickable Service Selection Pills -->
+            <div class="pills-group">
+              <label class="pills-label">WHAT DO YOU NEED?</label>
+              <div class="pills-flex" id="servicePills">
+                <button type="button" class="form-pill active" data-value="Graphic & Branding">Graphic &amp; Branding</button>
+                <button type="button" class="form-pill" data-value="Social Media & Creatives">Social Creatives (500+)</button>
+                <button type="button" class="form-pill" data-value="Motion & Reels">Motion Graphics &amp; Reels</button>
+                <button type="button" class="form-pill" data-value="UI & Figma Design">UI / Figma Systems</button>
+                <button type="button" class="form-pill" data-value="E-Book & Editorial">E-Book &amp; Comic Book</button>
+                <button type="button" class="form-pill" data-value="Full Campaign Suite">Full Retainer Suite</button>
+              </div>
+            </div>
+
+            <!-- Clickable Budget / Timeline Pills -->
+            <div class="pills-group">
+              <label class="pills-label">PROJECT TIMELINE / BUDGET</label>
+              <div class="pills-flex" id="budgetPills">
+                <button type="button" class="form-pill" data-value="Sprint (< 1 Week)">Sprint (&lt; 1 Week)</button>
+                <button type="button" class="form-pill active" data-value="Standard (2-4 Weeks)">Standard (2-4 Weeks)</button>
+                <button type="button" class="form-pill" data-value="Monthly Retainer">Monthly Retainer</button>
+                <button type="button" class="form-pill" data-value="Full-time / Contract">Full-Time / Contract</button>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="projectDetails">PROJECT DETAILS *</label>
+              <textarea id="projectDetails" name="details" rows="4" placeholder="Tell me a bit about your brand, goals, target deliverables, or deadline..." required></textarea>
+            </div>
+
+            <div class="form-actions-row">
+              <button type="submit" class="btn-submit-brief" id="submitBriefBtn">
+                <span class="btn-sub-text">Send Brief</span>
+                <span class="btn-sub-arrow">↗</span>
+              </button>
+              <p class="form-disclaimer">Zero spam. Your brief and ideas are strictly confidential.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 // MASSIVE TYPOGRAPHIC FOOTER & ART GALLERY -->
+    <footer class="okta-footer">
+      <!-- Art Gallery Banner -->
+      <div class="container footer-banner-container">
+        <div class="footer-gallery-card">
+          <img src="assets/images/footer-gallery.jpg" alt="Amita Dubey Studio Exhibition Gallery" class="footer-gallery-img">
+          <div class="gallery-overlay"></div>
+          <div class="gallery-floating-tag">
+            <span>NOIDA STUDIO // VISUAL ARCHIVE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Giant Editorial Typographic Amita Dubey Header -->
+      <div class="footer-giant-brand-wrap">
+        <div class="container giant-brand-container">
+          <h2 class="giant-brand-text">AMITA</h2>
+          <div class="footer-nav-menu">
+            <a href="#hero">Home</a>
+            <a href="#projects">Work</a>
+            <a href="#projects" id="footerArchiveLink">Archive</a>
+            <a href="#studio">Studio</a>
+            <a href="#services">Disciplines</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="container bottom-bar-inner">
+          <div class="bottom-left">
+            <p class="sub-statement">Let's make your brand <strong>impossible to ignore.</strong></p>
+            <p class="copyright-text">© 2026 AMITA DUBEY. ALL RIGHTS RESERVED. REPLICA OF OKTA STUDIO EDITORIAL ARCHITECTURE.</p>
+          </div>
+
+          <div class="bottom-center">
+            <a href="mailto:amitadubey46@gmail.com" class="center-contact">amitadubey46@gmail.com</a>
+            <a href="tel:8318843945" class="center-contact">+91 8318843945</a>
+          </div>
+
+          <div class="bottom-right">
+            <a href="https://www.behance.net/amitadubey/projects" target="_blank" rel="noopener" class="social-link">Behance ↗</a>
+            <a href="https://www.instagram.com/zenesys_official?igsh=Zmhjb3cwcmNyaWE3" target="_blank" rel="noopener" class="social-link">Instagram (Zenesys) ↗</a>
+            <a href="https://www.instagram.com/join_momento?igsh=MW43anQ1aGlkenhpbQ==" target="_blank" rel="noopener" class="social-link">Momento ↗</a>
+            <span class="ist-time" id="footerIstTime">IST (UTC+5:30)</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- MODAL: CASE STUDY DETAIL DRAWER -->
+  <div class="modal-backdrop" id="caseStudyModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeCaseStudyBtn" aria-label="Close case study">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag" id="modalCategory">Brand Identity</span>
+        <h2 class="modal-title" id="modalTitle">Zenesys Brand Evolution</h2>
+        <div class="modal-meta-row">
+          <div><strong>Client:</strong> <span id="modalClient">Zenesys Technosys</span></div>
+          <div><strong>Timeline:</strong> <span id="modalTimeline">July 2021 — 2026</span></div>
+          <div><strong>Role:</strong> <span id="modalRole">Lead Graphic &amp; Motion Designer</span></div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img-wrap">
+          <img src="assets/images/proj-brand.jpg" alt="Case Study Showcase" id="modalImg" class="modal-img">
+        </div>
+        <div class="modal-text-content">
+          <h3>The Challenge &amp; Solution</h3>
+          <p id="modalDescription">Over 500+ social media creatives, video reels, and high-converting marketing campaigns produced to establish brand consistency across corporate channels.</p>
+          <div class="modal-deliverables">
+            <h4>Key Deliverables</h4>
+            <ul id="modalDeliverablesList">
+              <li>Comprehensive corporate branding &amp; visual system</li>
+              <li>500+ social media posts, stories, reels, and ad creatives</li>
+              <li>Motion graphic animations for product updates</li>
+              <li>Collaborative cross-functional delivery on zero-delay timelines</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://www.behance.net/amitadubey/projects" target="_blank" rel="noopener" class="btn-modal-behance">View on Behance ↗</a>
+        <a href="#contact" class="btn-modal-inquire" id="modalInquireBtn">Inquire About Similar Work ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: FULL ARCHIVE DRAWER -->
+  <div class="modal-backdrop" id="archiveModal" aria-hidden="true">
+    <div class="modal-dialog modal-archive">
+      <button class="modal-close-btn" id="closeArchiveBtn" aria-label="Close archive">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag">PROJECT ARCHIVE (2019 — 2026)</span>
+        <h2 class="modal-title">Comprehensive Works Index</h2>
+      </div>
+
+      <!-- Archive Filter Tabs -->
+      <div class="archive-filters">
+        <button class="filter-btn active" data-filter="all">All Works (06)</button>
+        <button class="filter-btn" data-filter="branding">Branding &amp; Social</button>
+        <button class="filter-btn" data-filter="motion">Motion &amp; Reels</button>
+        <button class="filter-btn" data-filter="ui">UI &amp; Figma</button>
+        <button class="filter-btn" data-filter="editorial">E-Books &amp; Comic</button>
+      </div>
+
+      <!-- Filterable Projects Table -->
+      <div class="archive-table">
+        <div class="archive-table-header">
+          <span>PROJECT</span>
+          <span>CLIENT</span>
+          <span>DISCIPLINE</span>
+          <span>YEAR</span>
+          <span>ACTION</span>
+        </div>
+        <div class="archive-rows-container" id="archiveRows">
+          <div class="archive-row" data-category="branding">
+            <span class="row-name">Zenesys Brand Evolution</span>
+            <span class="row-client">Zenesys Technosys</span>
+            <span class="row-disc">Brand &amp; 500+ Social Assets</span>
+            <span class="row-year">2021 — 2026</span>
+            <button class="row-action" data-open="zenesys">Case Study ↗</button>
+          </div>
+          <div class="archive-row" data-category="motion">
+            <span class="row-name">Momento Social Pulse</span>
+            <span class="row-client">Join Momento</span>
+            <span class="row-disc">Motion Graphics &amp; Reels</span>
+            <span class="row-year">2023 — 2026</span>
+            <button class="row-action" data-open="momento">Case Study ↗</button>
+          </div>
+          <div class="archive-row" data-category="editorial">
+            <span class="row-name">Magic Software Comic Series</span>
+            <span class="row-client">Magic Software / Tekshapers</span>
+            <span class="row-disc">Comic Page Layouts &amp; Speech Bubbles</span>
+            <span class="row-year">2019 — 2020</span>
+            <button class="row-action" data-open="magic">Case Study ↗</button>
+          </div>
+          <div class="archive-row" data-category="ui">
+            <span class="row-name">Tekshapers Digital UI System</span>
+            <span class="row-client">Tekshapers</span>
+            <span class="row-disc">Figma UI Components &amp; Web Layouts</span>
+            <span class="row-year">2020</span>
+            <button class="row-action" data-open="tekshapers">Case Study ↗</button>
+          </div>
+          <div class="archive-row" data-category="motion">
+            <span class="row-name">Kinetic Typography Series</span>
+            <span class="row-client">Independent</span>
+            <span class="row-disc">After Effects Kinetic Reel</span>
+            <span class="row-year">2026</span>
+            <button class="row-action" data-open="kinetic">Case Study ↗</button>
+          </div>
+          <div class="archive-row" data-category="branding">
+            <span class="row-name">Behance Graphic Showcases</span>
+            <span class="row-client">Curated Showcase</span>
+            <span class="row-disc">Logo Identity &amp; Digital Composites</span>
+            <span class="row-year">2019 — 2026</span>
+            <button class="row-action" data-open="behance">Case Study ↗</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: BRIEF SUBMISSION CONFIRMATION -->
+  <div class="modal-backdrop" id="successModal" aria-hidden="true">
+    <div class="modal-dialog modal-success">
+      <button class="modal-close-btn" id="closeSuccessBtn" aria-label="Close confirmation">&times;</button>
+      <div class="success-icon">✦</div>
+      <h2 class="modal-title">Brief Received!</h2>
+      <p class="success-msg">Thank you, <strong id="successName">friend</strong>. Your project brief has been formatted and Amita Dubey will review it directly within 4 business hours.</p>
+      <div class="success-details-box" id="successDetailsBox"></div>
+      <div class="modal-footer center">
+        <button class="btn-start-now-hero" id="confirmSuccessBtn">
+          <span class="btn-text">Back to Portfolio</span>
+          <span class="btn-icon">✓</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
