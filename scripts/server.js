@@ -18,7 +18,9 @@ const MIME_TYPES = {
   '.pdf': 'application/pdf',
   '.woff2': 'font/woff2',
   '.woff': 'font/woff',
-  '.webmanifest': 'application/manifest+json'
+  '.webmanifest': 'application/manifest+json',
+  '.mp4': 'video/mp4',
+  '.webm': 'video/webm'
 };
 
 const SUBMISSIONS_FILE = path.join(PUBLIC_DIR, 'contact-submissions.json');

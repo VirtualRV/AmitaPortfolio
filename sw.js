@@ -60,6 +60,11 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // Bypass cache for media streaming (video range requests)
+  if (url.pathname.endsWith('.mp4') || url.pathname.endsWith('.webm')) {
+    return;
+  }
+
   // Do NOT cache API endpoints or dynamic data feeds
   if (url.pathname.startsWith('/api/') || url.pathname === '/data' || url.pathname === '/data.json') {
     event.respondWith(

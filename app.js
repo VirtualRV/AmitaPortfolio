@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initThemeToggle();
   initPWA();
+  initMotionVideos();
 });
 
 /* ==========================================================================
@@ -115,6 +116,7 @@ const projectData = {
     year: "2023 — 2026",
     category: "Mobile App UI & Social Creatives",
     img: "assets/images/projects/momento.png",
+    video: "assets/videos/amitapromomento.mp4",
     desc: "Comprehensive mobile app design and engagement visual system for Momento, an emotion-driven social networking platform crafted to foster genuine human connections.",
     deliverables: [
       "Mobile onboarding journey with custom character illustrations",
@@ -270,6 +272,7 @@ let currentProjectKey = 'roco';
 function initProjectPreviewSwitcher() {
   const projectItems = document.querySelectorAll('.project-item');
   const previewImg = document.getElementById('previewImg');
+  const previewVideo = document.getElementById('previewVideo');
   const previewCategory = document.getElementById('previewCategory');
   const previewTitle = document.getElementById('previewTitle');
   const previewClient = document.getElementById('previewClient');
@@ -280,15 +283,29 @@ function initProjectPreviewSwitcher() {
     if (!data) return;
     currentProjectKey = key;
 
-    // Visual transition
-    if (previewImg) {
-      previewImg.style.opacity = '0.3';
-      previewImg.style.transform = 'scale(0.97)';
-      setTimeout(() => {
-        previewImg.src = data.img;
-        previewImg.style.opacity = '1';
-        previewImg.style.transform = 'scale(1)';
-      }, 150);
+    // Handle video vs image preview
+    if (data.video) {
+      if (previewImg) previewImg.style.display = 'none';
+      if (previewVideo) {
+        previewVideo.style.display = 'block';
+        previewVideo.src = data.video;
+        previewVideo.play().catch(() => {});
+      }
+    } else {
+      if (previewVideo) {
+        previewVideo.style.display = 'none';
+        previewVideo.pause();
+      }
+      if (previewImg) {
+        previewImg.style.display = 'block';
+        previewImg.style.opacity = '0.3';
+        previewImg.style.transform = 'scale(0.97)';
+        setTimeout(() => {
+          previewImg.src = data.img;
+          previewImg.style.opacity = '1';
+          previewImg.style.transform = 'scale(1)';
+        }, 150);
+      }
     }
 
     if (previewCategory) previewCategory.textContent = data.category;
@@ -357,8 +374,39 @@ function openCaseStudy(key) {
   document.getElementById('modalTitle').textContent = data.title;
   document.getElementById('modalClient').textContent = data.client;
   document.getElementById('modalTimeline').textContent = data.year;
-  document.getElementById('modalImg').src = data.img;
   document.getElementById('modalDescription').textContent = data.desc;
+
+  const modalImg = document.getElementById('modalImg');
+  let modalVideo = document.getElementById('modalVideo');
+
+  if (data.video) {
+    if (modalImg) modalImg.style.display = 'none';
+    if (!modalVideo) {
+      modalVideo = document.createElement('video');
+      modalVideo.id = 'modalVideo';
+      modalVideo.className = 'modal-hero-video';
+      modalVideo.controls = true;
+      modalVideo.autoplay = true;
+      modalVideo.loop = true;
+      modalVideo.muted = true;
+      modalVideo.playsInline = true;
+      if (modalImg && modalImg.parentNode) {
+        modalImg.parentNode.insertBefore(modalVideo, modalImg);
+      }
+    }
+    modalVideo.style.display = 'block';
+    modalVideo.src = data.video;
+    modalVideo.play().catch(() => {});
+  } else {
+    if (modalVideo) {
+      modalVideo.style.display = 'none';
+      modalVideo.pause();
+    }
+    if (modalImg) {
+      modalImg.style.display = 'block';
+      modalImg.src = data.img;
+    }
+  }
 
   const listEl = document.getElementById('modalDeliverablesList');
   if (listEl && data.deliverables) {
@@ -439,6 +487,8 @@ function closeModal(modalEl) {
   modalEl.classList.remove('open');
   modalEl.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+  const vid = modalEl.querySelector('video');
+  if (vid) vid.pause();
 }
 
 /* ==========================================================================
@@ -775,5 +825,55 @@ function initPWA() {
       pwaInstallDrawerBtn.style.display = 'none';
     }
   });
+}
+
+/* ==========================================================================
+   12. MOTION DIRECTION & 3D REEL CONTROLS (Sound Toggle & Intersection Play)
+   ========================================================================== */
+function initMotionVideos() {
+  const cards = document.querySelectorAll('.motion-card');
+  cards.forEach(card => {
+    const video = card.querySelector('video');
+    const soundBtn = card.querySelector('.video-sound-toggle');
+    if (!video || !soundBtn) return;
+
+    const iconMuted = soundBtn.querySelector('.icon-muted');
+    const iconUnmuted = soundBtn.querySelector('.icon-unmuted');
+
+    soundBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      video.muted = !video.muted;
+      if (iconMuted && iconUnmuted) {
+        iconMuted.style.display = video.muted ? 'block' : 'none';
+        iconUnmuted.style.display = video.muted ? 'none' : 'block';
+      }
+    });
+
+    // Tap/Click video to toggle play/pause
+    video.addEventListener('click', () => {
+      if (video.paused) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
+  });
+
+  // IntersectionObserver to auto-pause when off-screen to preserve device performance
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target.querySelector('video');
+        if (!video) return;
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(c => observer.observe(c));
+  }
 }
 
