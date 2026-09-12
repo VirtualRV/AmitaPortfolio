@@ -20,7 +20,74 @@ const MIME_TYPES = {
   '.woff': 'font/woff'
 };
 
+const SUBMISSIONS_FILE = path.join(PUBLIC_DIR, 'contact-submissions.json');
+
 const server = http.createServer((req, res) => {
+  // Enable CORS
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    res.writeHead(204);
+    res.end();
+    return;
+  }
+
+  // Handle Contact Form Submission API
+  if (req.url === '/api/contact' && req.method === 'POST') {
+    let body = '';
+    req.on('data', chunk => { body += chunk; });
+    req.on('end', () => {
+      try {
+        const submission = JSON.parse(body);
+        submission.receivedAt = new Date().toISOString();
+
+        console.log('\n📬 [NEW CONTACT BRIEF RECEIVED]');
+        console.log(`👤 Name:     ${submission.name}`);
+        console.log(`✉️  Email:    ${submission.email}`);
+        console.log(`🏢 Company:  ${submission.company || 'N/A'}`);
+        console.log(`🎨 Services: ${submission.services}`);
+        console.log(`⏱️  Timeline: ${submission.timeline}`);
+        console.log(`📝 Details:  ${submission.details}`);
+        console.log('--------------------------------------------------\n');
+
+        let submissions = [];
+        if (fs.existsSync(SUBMISSIONS_FILE)) {
+          try {
+            submissions = JSON.parse(fs.readFileSync(SUBMISSIONS_FILE, 'utf8'));
+          } catch (e) {
+            submissions = [];
+          }
+        }
+        submissions.unshift(submission);
+        fs.writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2), 'utf8');
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true, message: 'Brief received and saved successfully' }));
+      } catch (err) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Invalid JSON payload' }));
+      }
+    });
+    return;
+  }
+
+  // View submissions via GET /api/submissions
+  if (req.url === '/api/submissions' && req.method === 'GET') {
+    let data = [];
+    if (fs.existsSync(SUBMISSIONS_FILE)) {
+      try {
+        data = JSON.parse(fs.readFileSync(SUBMISSIONS_FILE, 'utf8'));
+      } catch (e) {
+        data = [];
+      }
+    }
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(data, null, 2));
+    return;
+  }
+
   let reqPath = decodeURI(req.url.split('?')[0]);
   if (reqPath === '/' || reqPath === '') {
     reqPath = '/index.html';

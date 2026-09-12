@@ -94,93 +94,177 @@ function initCustomCursor() {
    3. PROJECT PREVIEW SWITCHER (Sticky Preview Card)
    ========================================================================== */
 const projectData = {
-  zenesys: {
-    title: "Zenesys Brand Evolution",
-    client: "Zenesys Technosys",
-    year: "July 2021 — 2026",
-    category: "Brand Identity & 500+ Social Assets",
-    img: "assets/images/proj-brand.jpg",
-    desc: "Over 5 years as lead visual creative, producing 500+ high-engagement social media posts, advertising reels, marketing collaterals, and unified brand design systems across tech verticals.",
+  roco: {
+    title: "Roco Fashion E-Commerce",
+    client: "Roco Style Studio",
+    year: "2024 — 2026",
+    category: "Web & Mobile UI / Brand Identity",
+    img: "assets/images/projects/portfolio-banners-roco.png",
+    desc: "Complete visual direction and dual-platform UI/UX design for Roco, a trend-forward fashion e-commerce storefront featuring responsive web and native mobile shopping experiences.",
     deliverables: [
-      "Full corporate rebrand & multi-channel design guidelines",
-      "500+ social creatives, carousels, and promotional reels",
-      "Motion graphics for high-impact product releases",
-      "100% on-time delivery track record across agency sprints"
+      "Responsive laptop & mobile shopping user interface in Figma",
+      "Product detail pages, size selector, wishlist & quick-buy flows",
+      "Promotional discount badges, seasonal banners & typographic identity",
+      "Structured design tokens and ready-to-code asset handoffs"
     ]
   },
   momento: {
     title: "Momento Social Pulse",
     client: "Join Momento",
     year: "2023 — 2026",
-    category: "Reels & Motion Graphics",
-    img: "assets/images/proj-ui.jpg",
-    desc: "Crafted kinetic typography reels, viral Instagram video snippets, and community engagement graphics that resulted in a 3x boost in audience interaction and brand recall.",
+    category: "Mobile App UI & Social Creatives",
+    img: "assets/images/projects/momento.png",
+    desc: "Comprehensive mobile app design and engagement visual system for Momento, an emotion-driven social networking platform crafted to foster genuine human connections.",
     deliverables: [
-      "Kinetic typography reels & soundtrack synchronization",
-      "Interactive social media templates in Canva & Illustrator",
-      "Lifestyle campaign ad creatives with high conversion CTR",
-      "Multi-ratio video exports for Stories, Reels, and Feed"
+      "Mobile onboarding journey with custom character illustrations",
+      "Interactive emotion-meter feeds, audio snippets & reaction states",
+      "High-converting video reels, motion graphics & viral Instagram posts",
+      "Complete design system with dark and vibrant purple palettes"
     ]
   },
-  magic: {
-    title: "Magic Software Comic & E-Books",
-    client: "Magic Software / Tekshapers",
-    year: "Nov 2019 — June 2020",
-    category: "Editorial & Comic Layouts",
-    img: "assets/images/proj-comic.jpg",
-    desc: "Engineered detailed comic layouts, narrative panel pacing, dialogue balloon styling, and digital story adaptations for global educational and comic publishers.",
+  wolves: {
+    title: "Wolves Urban Apparel & Store",
+    client: "Wolves Streetwear",
+    year: "2024",
+    category: "Brand Identity & Web Storefront",
+    img: "assets/images/projects/portfolio-banners-wolves.png",
+    desc: "Dark brutalist brand identity and responsive e-commerce lookbook for Wolves, an edgy modern streetwear label celebrating raw youth culture.",
     deliverables: [
-      "Custom page layouts and digital panel compositions",
-      "Speech bubble placement, dynamic lettering and sound effects",
-      "Responsive e-book screen layout calibration",
-      "Graphic novel illustration color enhancements"
+      "Bold monochrome logo identity & apparel typography",
+      "High-impact editorial product lookbook web UI",
+      "Drop announcements, campaign posters & Instagram teasers",
+      "Optimized e-commerce collection grid with seamless checkout"
     ]
   },
-  tekshapers: {
-    title: "Tekshapers Digital UI Framework",
-    client: "Tekshapers Solutions",
-    year: "2020",
-    category: "Web UI & Prototyping",
-    img: "assets/images/proj-ui.jpg",
-    desc: "Designed scalable Figma UI components, dark-mode user dashboards, and modern wireframe prototypes optimized for rapid frontend developer handoff.",
+  fashionbooms: {
+    title: "Fashion Booms Mobile App",
+    client: "Fashion Booms Global",
+    year: "2024 — 2025",
+    category: "Mobile App UI/UX & E-Commerce",
+    img: "assets/images/projects/portfolio banners fashion booms.png",
+    desc: "End-to-end mobile shopping application design for a global fast-fashion retailer, engineered to drive mobile sales conversion with effortless product discovery.",
     deliverables: [
-      "Figma design token architecture & reusable components",
-      "Clean dark-mode dashboard interfaces and mobile states",
-      "Interactive prototype click-through flows",
-      "Design-to-code alignment and asset delivery"
+      "Intuitive mobile catalog, categorized filters & product cards",
+      "Frictionless 3-step checkout with multiple payment gateway options",
+      "Size recommendation modals and dynamic photo swatches",
+      "Developer-aligned interactive Figma component library"
     ]
   },
-  kinetic: {
-    title: "Kinetic Motion Series 2026",
-    client: "Independent Motion Lab",
-    year: "2026",
-    category: "After Effects Kinetic Type",
-    img: "assets/images/proj-brand.jpg",
-    desc: "Experimental series combining expressive typography, audio-reactive motion pacing, and 3D lighting transitions built entirely in After Effects.",
+  addcraft: {
+    title: "Add Craft Generative AI Studio",
+    client: "Add Craft SaaS",
+    year: "2025 — 2026",
+    category: "AI SaaS Platform UI & Design System",
+    img: "assets/images/projects/portfolio-banners-Add-craft.png",
+    desc: "Futuristic dark-mode creative workspace UI and branding identity for Add Craft, a next-generation AI image, audio, and video generation suite.",
     deliverables: [
-      "Kinetic typography title sequences and logo stings",
-      "Audio-reactive motion transitions and visual effects",
-      "Social format modular templates for rapid branding",
-      "High framerate rendering and visual sound design"
+      "Web SaaS dashboard featuring modular toolbars and generation canvas",
+      "Prompt engineering interface with quality and duration controls",
+      "Custom neon feather logo mark & cosmic branding aesthetic",
+      "Tiered subscription pricing cards & workspace navigation"
     ]
   },
-  behance: {
-    title: "Behance Curated Portfolio",
-    client: "Curated Global Showcase",
-    year: "2019 — 2026",
-    category: "Visual Identity & Graphic Art",
-    img: "assets/images/proj-comic.jpg",
-    desc: "A comprehensive public archive of branding identity systems, vector illustrations, commercial retouching, and graphic artworks featured on Behance.",
+  mobipay: {
+    title: "MobiPay Digital E-Wallet",
+    client: "MobiPay Financial",
+    year: "2024",
+    category: "Fintech Mobile App UI/UX",
+    img: "assets/images/projects/E-wallet-Mobile-App-Development-1.png",
+    desc: "Minimalist, trusted fintech mobile wallet app interface designed to make peer-to-peer payments and money transfers seamless across international currencies.",
     deliverables: [
-      "Featured case studies across branding and vector graphics",
-      "Packaging concepts, posters, and logo identities",
-      "High-resolution vector compositions in Adobe Illustrator",
-      "Community recognition and client collaborations"
+      "Clean onboarding and instant phone OTP authentication screens",
+      "Virtual debit card management and balance dashboard",
+      "Transaction history tracking with clear status categorization",
+      "Security-focused micro-interactions and accessible typography"
+    ]
+  },
+  harley: {
+    title: "Harley-Davidson Heritage Showcase",
+    client: "Automotive Interactive",
+    year: "2024",
+    category: "Automotive Web UI & Hero Experience",
+    img: "assets/images/projects/HARLEY-DAVIDSON-BIKE-UI-Save-it.jpg",
+    desc: "High-octane web showcase and digital landing page design celebrating legendary Harley-Davidson cruisers with bold typography and immersive visual styling.",
+    deliverables: [
+      "Full-bleed visual landing page featuring yellow accent highlights",
+      "Interactive 360-degree bike inspection and spec overlays",
+      "Cinematic video trailer integration and sound preview modules",
+      "Responsive design optimized for 4K desktop and mobile viewports"
+    ]
+  },
+  virtualtryon: {
+    title: "Virtual Room AR Fitting App",
+    client: "Virtual Fit Labs",
+    year: "2025",
+    category: "AR/AI Mobile App UI & Visual Design",
+    img: "assets/images/projects/portfolio-banners-virtual-try-on.png",
+    desc: "Innovative augmented-reality apparel fitting interface allowing online shoppers to project clothes onto live camera viewports and customize fit before purchasing.",
+    deliverables: [
+      "AR camera viewport controls, garment carousel & size toggles",
+      "Clean orange-themed mobile shopping UI and cart triggers",
+      "Futuristic 'VR Virtual' brand identity mark and typography",
+      "User feedback indicators for realistic cloth drape simulations"
+    ]
+  },
+  healthcare: {
+    title: "Healthcare AI Agent & Clinical App",
+    client: "CarePulse Healthtech",
+    year: "2025",
+    category: "Healthtech Mobile & Web UI",
+    img: "assets/images/projects/portfolio-banners-AI-Agent-Created-for-Healthcare-Client.png",
+    desc: "Comprehensive digital healthcare platform integrating doctor scheduling, patient clinical records, and an intelligent triage AI agent.",
+    deliverables: [
+      "Doctor appointment scheduling calendar with verified physician ratings",
+      "Medical article feed, symptom triage and AI chat assistant UI",
+      "Remote patient chronic care monitoring telemetry views",
+      "Accessible typography and medical-grade color harmony"
+    ]
+  },
+  jewelry: {
+    title: "Heri Jane Luxury Jewelry",
+    client: "Heri Jane Fine Jewelry",
+    year: "2023 — 2024",
+    category: "Luxury E-Commerce & Brand Identity",
+    img: "assets/images/projects/Jewelry-6.png",
+    desc: "Sophisticated luxury e-commerce mobile experience featuring dark editorial backgrounds, golden highlights, and exquisite product photography curation.",
+    deliverables: [
+      "Warm ambient dark-mode mobile shopping interface",
+      "Jewelry catalog grids for bangles, necklaces, and earrings",
+      "Curated editorial typography matching premium jewelry market",
+      "High-conversion 'Get Started' and wishlist purchase flows"
+    ]
+  },
+  smartwatch: {
+    title: "Smart Watch Tech Store & Web UI",
+    client: "Apex Wearables",
+    year: "2024",
+    category: "Wearable Tech Web UI & Campaign",
+    img: "assets/images/projects/Smart-Watch-portfolio.png",
+    desc: "Vibrant e-commerce storefront and promotional campaign design for next-generation smart watches, featuring dynamic category tabs and promotional event banners.",
+    deliverables: [
+      "Vibrant high-contrast purple store theme and hero showcase",
+      "Black Friday promotional campaign banners and badges",
+      "Product comparison matrix by strap style, display, and features",
+      "Responsive web grid with instant search and cart integration"
+    ]
+  },
+  socialcreatives: {
+    title: "500+ Social Media & Marketing Creatives",
+    client: "Zenesys Technosys & Client Accounts",
+    year: "2021 — 2026",
+    category: "Social Media Templates, Reels & Ads",
+    img: "assets/images/projects/Insta-Template-1.jpg",
+    desc: "Extensive portfolio of 500+ commercial graphics, Instagram story & post templates, advertising carousels, and viral video reels delivered across 5+ years.",
+    deliverables: [
+      "500+ high-velocity social media posts, stories, and carousels",
+      "Reusable brand templates in Canva, Photoshop & Illustrator",
+      "Performance marketing ad creatives with measurable conversion lifts",
+      "Strict deadline adherence with 100% on-time delivery across sprints"
     ]
   }
 };
 
-let currentProjectKey = 'zenesys';
+let currentProjectKey = 'roco';
 
 function initProjectPreviewSwitcher() {
   const projectItems = document.querySelectorAll('.project-item');
@@ -491,7 +575,30 @@ function initContactForm() {
       const company = document.getElementById('userCompany').value.trim() || 'N/A';
       const details = document.getElementById('projectDetails').value.trim();
 
-      // Show in success modal
+      const submissionPayload = {
+        name,
+        email,
+        company,
+        services: selectedServices.join(', '),
+        timeline: selectedBudget,
+        details
+      };
+
+      // 1. Post to local API endpoint (records in contact-submissions.json)
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(submissionPayload)
+      }).catch(err => console.log('Submission saved locally:', err));
+
+      // 2. Persist in browser localStorage
+      try {
+        const stored = JSON.parse(localStorage.getItem('amita_submissions') || '[]');
+        stored.unshift({ ...submissionPayload, time: new Date().toLocaleString() });
+        localStorage.setItem('amita_submissions', JSON.stringify(stored));
+      } catch (err) {}
+
+      // 3. Show in success modal
       if (successModal) {
         document.getElementById('successName').textContent = name || 'Friend';
         const detailsBox = document.getElementById('successDetailsBox');
@@ -501,6 +608,7 @@ function initContactForm() {
             <div><strong>Timeline / Scope:</strong> ${selectedBudget}</div>
             <div><strong>Company:</strong> ${company}</div>
             <div><strong>Email:</strong> ${email}</div>
+            <div><strong>Status:</strong> <span style="color:#00ff88;">Saved to Inbox &amp; Records</span></div>
           `;
         }
         openModal(successModal);
@@ -521,10 +629,10 @@ function initContactForm() {
       
       const mailtoUrl = `mailto:amitadubey46@gmail.com?subject=${subject}&body=${body}`;
       
-      // Optionally trigger after small delay
+      // Open mail client if preferred
       setTimeout(() => {
         window.location.href = mailtoUrl;
-      }, 1000);
+      }, 1200);
 
       form.reset();
     });

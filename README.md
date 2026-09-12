@@ -12,7 +12,7 @@
 - **Dual Marquee Tickers**: Smooth infinite rolling ticker banners moving in opposite directions.
 - **Interactive Projects & Sticky Preview**: Dynamic preview changes on hover, complete with an interactive **Case Study Modal** and a filterable **Full Archive Modal**.
 - **Software Disciplines**: Photoshop, Illustrator, After Effects, Figma, Canva, Premiere Pro & Lightroom.
-- **Process & Career Timeline**: Documenting 5+ years of experience across Zenesys Technosys Pvt. Ltd. and Magic Software / Tekshapers.
+- **Process & Career Timeline**: Documenting 6 years of experience across Zenesys Technosys Pvt. Ltd. and Magic Software / Tekshapers.
 - **Interactive Brief Form**: Custom service and budget pill selectors with instant verification.
 
 ---
