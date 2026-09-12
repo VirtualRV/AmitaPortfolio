@@ -1,5 +1,14 @@
 [
   {
+    "name": "Kavita Roy",
+    "email": "kavita@roycreatives.com",
+    "company": "Roy Creatives",
+    "services": "Graphic & Branding, Motion & Reels",
+    "timeline": "Sprint (< 1 Week)",
+    "details": "Live test from client to verify Vercel /data updates dynamically.",
+    "receivedAt": "2026-09-12T18:23:16.055Z"
+  },
+  {
     "name": "Vercel Deployment Check",
     "email": "check@brandstudio.in",
     "company": "Brand Studio Global",
