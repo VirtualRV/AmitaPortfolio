@@ -37,6 +37,5 @@ http://localhost:3000/
 ## 📬 Contact Amita Dubey
 
 - **Email**: [amitadubey46@gmail.com](mailto:amitadubey46@gmail.com)
-- **Phone**: +91 8318843945
 - **Behance**: [behance.net/amitadubey/projects](https://www.behance.net/amitadubey/projects)
 - **Location**: Noida, Uttar Pradesh, India
