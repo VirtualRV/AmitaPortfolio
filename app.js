@@ -1,6 +1,6 @@
 /**
  * AMITA DUBEY PORTFOLIO — INTERACTIVE JAVASCRIPT
- * Replicating Okta Studio Framer Interactions, Micro-animations & Dynamic Logic
+ * Amita Design Studio Editorial Interactions, Micro-animations & Dynamic Logic
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -492,7 +492,7 @@ function closeModal(modalEl) {
 }
 
 /* ==========================================================================
-   6. FAQ CHAT-PILL ACCORDIONS (Okta Style)
+   6. FAQ CHAT-PILL ACCORDIONS (Amita Design Studio Style)
    ========================================================================== */
 function initFaqAccordion() {
   const faqItems = document.querySelectorAll('.chat-faq-item');

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AMITA DUBEY PORTFOLIO — OKTA STUDIO FRAMER REPLICA STYLESHEET
+   AMITA DUBEY PORTFOLIO — AMITA DESIGN STUDIO STYLESHEET
    Design System: Editorial Dark, International Orange (#ff4d1c), Bone (#f2efe9)
    Typography: Hanken Grotesk & Inter
    ========================================================================== */
@@ -192,8 +192,9 @@ img {
 }
 
 /* ==========================================================================
-   00. NAVBAR (Okta Studio Replica)
+   00. NAVBAR (Amita Design Studio)
    ========================================================================== */
+.amita-header,
 .okta-header {
   position: fixed;
   top: 0;
@@ -2129,7 +2130,7 @@ img {
 }
 
 /* ==========================================================================
-   10. CHAT-BUBBLE ACCORDION FAQ (Okta Studio Replica)
+   10. CHAT-BUBBLE ACCORDION FAQ (Amita Design Studio)
    ========================================================================== */
 .faq-section {
   padding: 8rem 0;
@@ -2224,7 +2225,7 @@ img {
 }
 
 /* ==========================================================================
-   11. START A PROJECT / CONTACT (Okta Studio Replica)
+   11. START A PROJECT / CONTACT (Amita Design Studio)
    ========================================================================== */
 .contact-section {
   padding: 8rem 0;
@@ -2474,6 +2475,7 @@ img {
 /* ==========================================================================
    12. MASSIVE TYPOGRAPHIC FOOTER & GALLERY
    ========================================================================== */
+.amita-footer,
 .okta-footer {
   padding-top: 6rem;
   position: relative;

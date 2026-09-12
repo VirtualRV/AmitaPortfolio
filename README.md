@@ -1,7 +1,7 @@
 # Amita Dubey — Creative Portfolio
 
 > **Graphic Designer | UI Designer | Motion Designer**  
-> High-impact portfolio replica built with the editorial design aesthetics of Okta Studio Framer.
+> High-impact portfolio built with the editorial design aesthetics of Amita Design Studio.
 
 ---
 
