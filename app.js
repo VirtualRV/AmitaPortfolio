@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initMobileNav();
   initThemeToggle();
+  initPWA();
 });
 
 /* ==========================================================================
@@ -676,14 +677,41 @@ function initMobileNav() {
 
   if (!toggleBtn || !drawer) return;
 
-  toggleBtn.addEventListener('click', () => {
-    drawer.classList.toggle('open');
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    toggleBtn.classList.remove('active');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleDrawer() {
+    const isOpen = drawer.classList.toggle('open');
+    toggleBtn.classList.toggle('active', isOpen);
+    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDrawer();
   });
 
   mobLinks.forEach(link => {
     link.addEventListener('click', () => {
-      drawer.classList.remove('open');
+      closeDrawer();
     });
+  });
+
+  // Close drawer on click outside
+  document.addEventListener('click', (e) => {
+    if (drawer.classList.contains('open') && !drawer.contains(e.target) && !toggleBtn.contains(e.target)) {
+      closeDrawer();
+    }
+  });
+
+  // Close drawer on ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      closeDrawer();
+    }
   });
 }
 
@@ -700,3 +728,52 @@ function initThemeToggle() {
     btn.title = isLight ? "Switch to Dark Studio mode" : "Toggle ambiance";
   });
 }
+
+/* ==========================================================================
+   11. PROGRESSIVE WEB APP (PWA) REGISTRATION & INSTALL PROMPT
+   ========================================================================== */
+function initPWA() {
+  // 1. Register Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((reg) => {
+          console.log('[PWA] Service Worker registered successfully, scope:', reg.scope);
+        })
+        .catch((err) => {
+          console.warn('[PWA] Service Worker registration error:', err);
+        });
+    });
+  }
+
+  // 2. Handle beforeinstallprompt for install button
+  let deferredPrompt = null;
+  const pwaInstallDrawerBtn = document.getElementById('pwaInstallDrawerBtn');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the mini-infobar from appearing on mobile
+    e.preventDefault();
+    deferredPrompt = e;
+    console.log('[PWA] App is installable, showing install button');
+
+    if (pwaInstallDrawerBtn) {
+      pwaInstallDrawerBtn.style.display = 'flex';
+      pwaInstallDrawerBtn.addEventListener('click', async () => {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        console.log('[PWA] User response to install prompt:', outcome);
+        deferredPrompt = null;
+        pwaInstallDrawerBtn.style.display = 'none';
+      });
+    }
+  });
+
+  window.addEventListener('appinstalled', () => {
+    console.log('[PWA] Application was installed successfully');
+    if (pwaInstallDrawerBtn) {
+      pwaInstallDrawerBtn.style.display = 'none';
+    }
+  });
+}
+

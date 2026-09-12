@@ -1,0 +1,59 @@
+{
+  "name": "Amita Dubey — Graphic, UI & Motion Designer",
+  "short_name": "Amita Dubey",
+  "description": "Portfolio of Amita Dubey, Creative Graphic Designer, UI Designer & Motion Designer with 6 years of experience delivering 500+ visual solutions.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0d1110",
+  "theme_color": "#0d1110",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": [
+    "design",
+    "portfolio",
+    "business"
+  ],
+  "shortcuts": [
+    {
+      "name": "Selected Work",
+      "short_name": "Work",
+      "description": "View 12 selected design and UI projects",
+      "url": "/#projects",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Start Project Brief",
+      "short_name": "Hire Me",
+      "description": "Get in touch for high-impact design collaborations",
+      "url": "/#contact",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Disciplines & Services",
+      "short_name": "Services",
+      "description": "Branding, UI Systems, Motion Graphics & Social",
+      "url": "/#services",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

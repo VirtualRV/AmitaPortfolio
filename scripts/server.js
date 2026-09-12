@@ -17,7 +17,8 @@ const MIME_TYPES = {
   '.ico': 'image/x-icon',
   '.pdf': 'application/pdf',
   '.woff2': 'font/woff2',
-  '.woff': 'font/woff'
+  '.woff': 'font/woff',
+  '.webmanifest': 'application/manifest+json'
 };
 
 const SUBMISSIONS_FILE = path.join(PUBLIC_DIR, 'contact-submissions.json');

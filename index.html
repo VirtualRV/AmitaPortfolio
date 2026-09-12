@@ -20,6 +20,14 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+
+  <!-- PWA Manifest & App Icons -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d1110">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Amita Dubey">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 </head>
 <body class="dark-theme">
 
@@ -84,6 +92,9 @@
         <a href="#experience" class="mob-link">Experience</a>
         <a href="#faq" class="mob-link">FAQ</a>
         <a href="assets/Amita_Dubey_Resume.pdf" download="Amita_Dubey_Resume.pdf" class="mob-link mob-resume-btn">Download Resume (PDF) ↓</a>
+        <button class="mob-link mob-pwa-btn" id="pwaInstallDrawerBtn" style="display: none;">
+          <span>✦ Install Portfolio App</span>
+        </button>
         <a href="#contact" class="mob-link cta-mob">Get In Touch ↗</a>
       </div>
     </div>
@@ -929,7 +940,7 @@
       <!-- Art Gallery Banner -->
       <div class="container footer-banner-container">
         <div class="footer-gallery-card">
-          <img src="assets/images/footer-gallery.jpg" alt="Amita Dubey Studio Exhibition Gallery" class="footer-gallery-img">
+          <img src="assets/images/footer-gallery.jpg?v=sharp_gallery_2026" alt="Amita Dubey Studio Exhibition Gallery" class="footer-gallery-img">
           <div class="gallery-overlay"></div>
           <div class="gallery-floating-tag">
             <span>NOIDA STUDIO // VISUAL ARCHIVE</span>
