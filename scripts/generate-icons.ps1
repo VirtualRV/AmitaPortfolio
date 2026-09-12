@@ -1,6 +1,6 @@
 Add-Type -AssemblyName System.Drawing
 
-$sourcePath = "C:\Users\Vikas\.gemini\antigravity-ide\brain\45765d1b-56de-4a4e-9b7c-704f0e88a9e9\amita_pwa_icon_master_1789241329252.jpg"
+$sourcePath = "C:\Users\Vikas\.gemini\antigravity-ide\brain\45765d1b-56de-4a4e-9b7c-704f0e88a9e9\ad_orange_fullbleed_1789241578211.jpg"
 $outputDir = "d:\AmitaPortFolio\assets\icons"
 if (-not (Test-Path $outputDir)) {
     New-Item -ItemType Directory -Force -Path $outputDir | Out-Null

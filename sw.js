@@ -3,7 +3,7 @@
    Offline caching, stale-while-revalidate for assets, and instant loading
    ========================================================================== */
 
-const CACHE_NAME = 'amita-portfolio-v1.0.3';
+const CACHE_NAME = 'amita-portfolio-v1.0.4';
 
 const PRECACHE_ASSETS = [
   '/',
