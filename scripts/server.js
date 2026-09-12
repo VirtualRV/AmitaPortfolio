@@ -34,8 +34,10 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // Handle Contact Form Submission API
-  if (req.url === '/api/contact' && req.method === 'POST') {
+  const cleanUrl = req.url.split('?')[0].replace(/\/$/, '') || '/';
+
+  // Handle Contact Form Submission API (POST /data, /api/contact, /contact)
+  if ((cleanUrl === '/data' || cleanUrl === '/api/contact' || cleanUrl === '/contact') && req.method === 'POST') {
     let body = '';
     req.on('data', chunk => { body += chunk; });
     req.on('end', () => {
@@ -63,18 +65,21 @@ const server = http.createServer((req, res) => {
         submissions.unshift(submission);
         fs.writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2), 'utf8');
 
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ success: true, message: 'Brief received and saved successfully' }));
+        res.writeHead(200, {
+          'Content-Type': 'application/json; charset=UTF-8',
+          'Cache-Control': 'no-cache'
+        });
+        res.end(JSON.stringify({ success: true, message: 'Brief received and saved to JSON file successfully', totalSubmissions: submissions.length }));
       } catch (err) {
-        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.writeHead(400, { 'Content-Type': 'application/json; charset=UTF-8' });
         res.end(JSON.stringify({ error: 'Invalid JSON payload' }));
       }
     });
     return;
   }
 
-  // View submissions via GET /api/submissions
-  if (req.url === '/api/submissions' && req.method === 'GET') {
+  // View stored submissions via GET /data, /data.json, /api/submissions, /api/data
+  if ((cleanUrl === '/data' || cleanUrl === '/data.json' || cleanUrl === '/api/submissions' || cleanUrl === '/api/data') && req.method === 'GET') {
     let data = [];
     if (fs.existsSync(SUBMISSIONS_FILE)) {
       try {
@@ -83,7 +88,10 @@ const server = http.createServer((req, res) => {
         data = [];
       }
     }
-    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.writeHead(200, {
+      'Content-Type': 'application/json; charset=UTF-8',
+      'Cache-Control': 'no-cache'
+    });
     res.end(JSON.stringify(data, null, 2));
     return;
   }
