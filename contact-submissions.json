@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Vikas",
+    "email": "alex@example.com",
+    "company": "23232",
+    "services": "Graphic & Branding, E-Book & Editorial",
+    "timeline": "Sprint (< 1 Week)",
+    "details": "sdsds",
+    "receivedAt": "2026-09-12T17:38:52.467Z"
+  },
+  {
+    "name": "Rahul Sharma",
+    "email": "rahul@designstudio.in",
+    "company": "Velvet Studio",
+    "services": "UI / Figma Systems",
+    "timeline": "Standard (2-4 Weeks)",
+    "details": "Looking for brand identity revamp and mobile UI design.",
+    "receivedAt": "2026-09-12T17:33:41.475Z"
+  },
+  {
+    "name": "Test Visitor",
+    "email": "visitor@example.com",
+    "company": "Acme Studio",
+    "services": "Graphic and Branding",
+    "timeline": "Standard (2-4 Weeks)",
+    "details": "Need brand identity",
+    "receivedAt": "2026-09-12T17:28:51.269Z"
+  }
+]

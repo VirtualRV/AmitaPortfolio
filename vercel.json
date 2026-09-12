@@ -1,0 +1,17 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/data",
+      "destination": "/contact-submissions.json"
+    },
+    {
+      "source": "/api/submissions",
+      "destination": "/contact-submissions.json"
+    },
+    {
+      "source": "/api/data",
+      "destination": "/contact-submissions.json"
+    }
+  ]
+}

@@ -64,6 +64,7 @@ const server = http.createServer((req, res) => {
         }
         submissions.unshift(submission);
         fs.writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2), 'utf8');
+        try { fs.writeFileSync(path.join(PUBLIC_DIR, 'data.json'), JSON.stringify(submissions, null, 2), 'utf8'); } catch (e) {}
 
         res.writeHead(200, {
           'Content-Type': 'application/json; charset=UTF-8',
