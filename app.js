@@ -591,22 +591,37 @@ function initContactForm() {
         details
       };
 
-      // 1. Post to local API endpoint (records directly in contact-submissions.json and data.json)
+      // 1. Post to API endpoint (works on local node server and Vercel serverless function)
+      let savedToBackend = false;
       try {
-        await fetch('/api/contact', {
+        const res = await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(submissionPayload)
         });
+        if (res.ok) savedToBackend = true;
       } catch (err) {
-        console.warn('API save fallback:', err);
-        try {
-          await fetch('/data', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(submissionPayload)
-          });
-        } catch (e) {}
+        console.warn('Backend API note:', err);
+      }
+
+      // 2. Direct Cloud Storage Sync Fallback (ensures live Vercel /data always receives the submission)
+      try {
+        const CLOUD_BIN = 'https://extendsclass.com/api/json-storage/bin/afebddc';
+        const curRes = await fetch(`${CLOUD_BIN}?t=${Date.now()}`);
+        let curList = [];
+        if (curRes.ok) {
+          curList = await curRes.json();
+        }
+        if (!Array.isArray(curList)) curList = [];
+        curList.unshift({ ...submissionPayload, receivedAt: new Date().toISOString() });
+        await fetch(CLOUD_BIN, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(curList)
+        });
+        savedToBackend = true;
+      } catch (cloudErr) {
+        console.warn('Cloud sync fallback:', cloudErr);
       }
 
       // 2. Persist in browser localStorage

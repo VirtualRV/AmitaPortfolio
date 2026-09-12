@@ -3,15 +3,23 @@
   "rewrites": [
     {
       "source": "/data",
-      "destination": "/contact-submissions.json"
+      "destination": "/api/data"
+    },
+    {
+      "source": "/data.json",
+      "destination": "/api/data"
     },
     {
       "source": "/api/submissions",
-      "destination": "/contact-submissions.json"
+      "destination": "/api/data"
     },
     {
       "source": "/api/data",
-      "destination": "/contact-submissions.json"
+      "destination": "/api/data"
+    },
+    {
+      "source": "/api/contact",
+      "destination": "/api/contact"
     }
   ]
 }

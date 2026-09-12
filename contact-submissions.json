@@ -1,5 +1,14 @@
 [
   {
+    "name": "Vercel Deployment Check",
+    "email": "check@brandstudio.in",
+    "company": "Brand Studio Global",
+    "services": "UI / Figma Systems",
+    "timeline": "Standard (2-4 Weeks)",
+    "details": "Testing live cloud data persistence across Vercel deployments.",
+    "receivedAt": "2026-09-12T18:22:03.318Z"
+  },
+  {
     "name": "Rajesh Khanna",
     "email": "rajesh@designhub.in",
     "company": "Design Hub",

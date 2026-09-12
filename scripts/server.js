@@ -66,6 +66,13 @@ const server = http.createServer((req, res) => {
         fs.writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2), 'utf8');
         try { fs.writeFileSync(path.join(PUBLIC_DIR, 'data.json'), JSON.stringify(submissions, null, 2), 'utf8'); } catch (e) {}
 
+        // Sync with live cloud store in background
+        fetch('https://extendsclass.com/api/json-storage/bin/afebddc', {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(submissions)
+        }).catch(err => console.warn('Cloud sync error in server:', err.message));
+
         res.writeHead(200, {
           'Content-Type': 'application/json; charset=UTF-8',
           'Cache-Control': 'no-cache'
