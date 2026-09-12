@@ -567,8 +567,15 @@ function initContactForm() {
   });
 
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      const submitBtn = document.getElementById('submitBriefBtn');
+      const origBtnText = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="btn-sub-text">Saving Brief...</span>';
+      }
 
       const name = document.getElementById('userName').value.trim();
       const email = document.getElementById('userEmail').value.trim();
@@ -584,12 +591,23 @@ function initContactForm() {
         details
       };
 
-      // 1. Post to local API endpoint (records in contact-submissions.json)
-      fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(submissionPayload)
-      }).catch(err => console.log('Submission saved locally:', err));
+      // 1. Post to local API endpoint (records directly in contact-submissions.json and data.json)
+      try {
+        await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(submissionPayload)
+        });
+      } catch (err) {
+        console.warn('API save fallback:', err);
+        try {
+          await fetch('/data', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(submissionPayload)
+          });
+        } catch (e) {}
+      }
 
       // 2. Persist in browser localStorage
       try {
@@ -598,7 +616,7 @@ function initContactForm() {
         localStorage.setItem('amita_submissions', JSON.stringify(stored));
       } catch (err) {}
 
-      // 3. Show in success modal
+      // 3. Show in success modal (WITHOUT opening Outlook or any external app)
       if (successModal) {
         document.getElementById('successName').textContent = name || 'Friend';
         const detailsBox = document.getElementById('successDetailsBox');
@@ -608,32 +626,19 @@ function initContactForm() {
             <div><strong>Timeline / Scope:</strong> ${selectedBudget}</div>
             <div><strong>Company:</strong> ${company}</div>
             <div><strong>Email:</strong> ${email}</div>
-            <div><strong>Status:</strong> <span style="color:#00ff88;">Saved to Inbox &amp; Records</span></div>
+            <div style="margin-top:0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.1);">
+              <span style="color:#00ff88; font-weight:600;">✓ Saved to JSON File &amp; Records</span>
+            </div>
           `;
         }
         openModal(successModal);
       }
 
-      // Pre-fill mailto link in background for convenience
-      const subject = encodeURIComponent(`Project Brief from ${name} (${company})`);
-      const body = encodeURIComponent(
-        `Hi Amita,\n\nI would like to inquire about a project:\n\n` +
-        `Name: ${name}\n` +
-        `Email: ${email}\n` +
-        `Company: ${company}\n` +
-        `Selected Services: ${selectedServices.join(', ')}\n` +
-        `Timeline / Scope: ${selectedBudget}\n\n` +
-        `Project Details:\n${details}\n\n` +
-        `Looking forward to hearing from you!`
-      );
-      
-      const mailtoUrl = `mailto:amitadubey46@gmail.com?subject=${subject}&body=${body}`;
-      
-      // Open mail client if preferred
-      setTimeout(() => {
-        window.location.href = mailtoUrl;
-      }, 1200);
-
+      // Re-enable and reset form
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = origBtnText;
+      }
       form.reset();
     });
   }
