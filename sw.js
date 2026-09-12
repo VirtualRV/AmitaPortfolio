@@ -3,7 +3,7 @@
    Offline caching, stale-while-revalidate for assets, and instant loading
    ========================================================================== */
 
-const CACHE_NAME = 'amita-portfolio-v1.0.2';
+const CACHE_NAME = 'amita-portfolio-v1.0.3';
 
 const PRECACHE_ASSETS = [
   '/',
@@ -11,9 +11,14 @@ const PRECACHE_ASSETS = [
   '/style.css',
   '/app.js',
   '/manifest.json',
+  '/favicon.ico',
+  '/assets/icons/favicon.svg',
+  '/assets/icons/favicon-32x32.png',
+  '/assets/icons/favicon-16x16.png',
+  '/assets/icons/apple-touch-icon.png',
   '/assets/icons/icon-192.png',
   '/assets/icons/icon-512.png',
-  '/assets/icons/apple-touch-icon.png',
+  '/assets/icons/icon-maskable.png',
   '/assets/images/hero-portrait.jpg',
   '/assets/images/hero-portrait-shirt.jpg',
   '/assets/images/proj-ui.jpg',

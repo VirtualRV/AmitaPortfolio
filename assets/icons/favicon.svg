@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#18231f" />
+      <stop offset="60%" stop-color="#0c100f" />
+      <stop offset="100%" stop-color="#060807" />
+    </radialGradient>
+
+    <!-- Squircle Border Gradient -->
+    <linearGradient id="squircleBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f084" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#00f084" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Titanium Metal Gradient -->
+    <linearGradient id="metalGradA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#e8edea" />
+      <stop offset="70%" stop-color="#9bb3a8" />
+      <stop offset="100%" stop-color="#556961" />
+    </linearGradient>
+
+    <linearGradient id="metalGradD" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#cbe0d6" />
+      <stop offset="75%" stop-color="#7e9c90" />
+      <stop offset="100%" stop-color="#465c54" />
+    </linearGradient>
+
+    <!-- Neon Emerald Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Soft Drop Shadow -->
+    <filter id="monogramShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.85" />
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#00f084" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Base Container -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGlow)" stroke="url(#squircleBorder)" stroke-width="6" />
+
+  <!-- Subtle Geometric Decorative Grid Texture -->
+  <g opacity="0.08" stroke="#00f084" stroke-width="1.5">
+    <line x1="64" y1="16" x2="64" y2="496" />
+    <line x1="448" y1="16" x2="448" y2="496" />
+    <line x1="16" y1="64" x2="496" y2="64" />
+    <line x1="16" y1="448" x2="496" y2="448" />
+    <circle cx="256" cy="256" r="180" fill="none" stroke-dasharray="4 8" />
+  </g>
+
+  <!-- Monogram Group with Shadow & Glow -->
+  <g filter="url(#monogramShadow)">
+    <!-- Neon Outer Halo Path for 'AD' -->
+    <path d="M 216 132 L 108 360 L 160 360 L 186 304 L 274 304 L 292 342 C 322 360 364 366 404 344 C 444 320 460 274 460 240 C 460 178 418 136 348 136 C 304 136 268 152 246 182 Z"
+          fill="none" stroke="#00f084" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" opacity="0.85" />
+
+    <!-- Letter 'A' (Faceted Swiss Monogram) -->
+    <!-- Left Leg -->
+    <polygon points="216,132 230,166 160,356 112,356" fill="url(#metalGradA)" />
+    <!-- Right Leg & Facet -->
+    <polygon points="216,132 230,166 288,300 306,300" fill="url(#metalGradA)" opacity="0.9" />
+    <!-- A Inner Cutout Triangle -->
+    <polygon points="216,182 258,272 176,272" fill="#0c100f" stroke="#00f084" stroke-width="3" stroke-opacity="0.7" />
+    <!-- A Horizontal Crossbar Highlight -->
+    <polygon points="172,268 266,268 276,290 162,290" fill="url(#metalGradA)" />
+
+    <!-- Letter 'D' (Curved Architectural Geometry) -->
+    <!-- Main Spine & Outer Arch -->
+    <path d="M 252 144 C 286 144 326 150 358 174 C 396 202 414 242 414 274 C 414 316 388 350 348 354 C 314 358 280 348 256 332 L 256 294 C 274 306 298 314 322 312 C 352 310 368 286 368 262 C 368 226 342 196 298 194 C 278 194 262 198 252 204 Z"
+          fill="url(#metalGradD)" />
+
+    <!-- Sharp 3D Bevel Edge Accents -->
+    <line x1="216" y1="132" x2="230" y2="166" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+    <line x1="216" y1="132" x2="112" y2="356" stroke="#ffffff" stroke-width="3" opacity="0.7" />
+    <path d="M 252 144 C 326 148 412 188 412 274" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.65" />
+    
+    <!-- Kinetic Starburst Core Accent (Amita Dubey Studio Hallmark) -->
+    <g transform="translate(216, 132)">
+      <path d="M 0 -16 Q 0 0 16 0 Q 0 0 0 16 Q 0 0 -16 0 Q 0 0 0 -16 Z" fill="#00f084" />
+      <circle cx="0" cy="0" r="3" fill="#ffffff" />
+    </g>
+  </g>
+</svg>
